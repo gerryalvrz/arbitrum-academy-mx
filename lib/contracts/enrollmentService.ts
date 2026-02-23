@@ -325,7 +325,7 @@ export class EnrollmentService {
       });
       
       // Try a simple read call
-      const contract = new ethers.Contract(
+      const _contract = new ethers.Contract(
         contractConfig.address, 
         contractConfig.abi, 
         this.provider

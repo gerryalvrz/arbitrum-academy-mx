@@ -3,8 +3,8 @@ import { useState } from "react";
 
 // Mock version for demo purposes - no on-chain functionality
 export function useMilestoneNFT() {
-  const [mockAddress] = useState("0x1234...5678");
-  const [mockChainId] = useState(44787); // Alfajores testnet
+  const [_mockAddress] = useState("0x1234...5678");
+  const [_mockChainId] = useState(44787); // Alfajores testnet
 
   async function hasBadge(tokenId: bigint): Promise<boolean> {
     // Mock: simulate some badges being owned
@@ -12,7 +12,7 @@ export function useMilestoneNFT() {
     return mockOwnedBadges.includes(tokenId);
   }
 
-  async function claimBadge(tokenId: bigint): Promise<{ hash: `0x${string}`, url?: string }> {
+  async function claimBadge(_tokenId: bigint): Promise<{ hash: `0x${string}`, url?: string }> {
     // Mock: simulate a transaction hash
     const mockHash = `0x${Math.random().toString(16).substring(2, 66)}` as `0x${string}`;
     const mockUrl = `https://alfajores.celoscan.io/tx/${mockHash}`;

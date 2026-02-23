@@ -15,7 +15,7 @@ interface RegisterProjectModalProps {
 }
 
 export default function RegisterProjectModal({
-  open,
+  open: isOpen,
   onOpenChange,
 }: RegisterProjectModalProps) {
   const [formData, setFormData] = useState({
@@ -53,13 +53,13 @@ export default function RegisterProjectModal({
       } else {
         setStatus('error');
       }
-    } catch (error) {
+    } catch (_error) {
       setStatus('error');
     }
   }
 
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
+    <Dialog open={isOpen} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-md bg-[#FCF6F1] dark:bg-celo-bg border-celo-border">
         <DialogHeader>
           <DialogTitle className="text-2xl font-display text-celo-fg">

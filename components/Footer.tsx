@@ -1,5 +1,4 @@
-import FormSubscribe from './FormSubscribe';
-import CeloLogo from './CeloLogo';
+import ArbitrumLogo from './ArbitrumLogo';
 
 export default function Footer() {
   return (
@@ -8,8 +7,8 @@ export default function Footer() {
         {/* Top Section with Logo */}
         <div className="mb-12">
           <div className="flex items-center gap-3">
-            <CeloLogo width={200} height={45} className="text-celo-black" />
-            <span className="font-italic text-2xl sm:text-3xl text-celo-black">
+            <ArbitrumLogo width={280} height={88} className="object-contain min-h-[72px] sm:min-h-[88px]" />
+            <span className="font-italic text-2xl sm:text-3xl text-celo-fg">
               México
             </span>
           </div>

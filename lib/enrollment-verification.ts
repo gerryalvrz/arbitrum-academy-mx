@@ -9,8 +9,6 @@ import { getCourseTokenId } from '@/lib/courseToken';
 import { 
   getOptimizedContractConfig, 
   OPTIMIZED_BADGE_ABI,
-  getNetworkConfig,
-  getOptimizedContractAddress
 } from '@/lib/contracts/optimized-badge-config';
 
 /**

@@ -19,6 +19,7 @@ const config: Config = {
   			'2xl': '1536px',
   		},
 		colors: {
+  			/* Arbitrum theme (celo-* var names kept for compatibility) */
   			celo: {
 					bg: 'var(--celo-bg)',
 					fg: 'var(--celo-fg)',
@@ -26,23 +27,39 @@ const config: Config = {
 					border: 'var(--celo-border)',
 					yellow: 'var(--celo-yellow)',
 					yweak: 'var(--celo-yellow-weak)',
-					accent: 'var(--celo-accent)'
+					accent: 'var(--celo-accent)',
+					card: 'var(--celo-card)'
 				},
-				// legacy direct tokens kept for compatibility
+				/* Arbitrum palette alias */
+				arbitrum: {
+					bg: 'var(--celo-bg)',
+					fg: 'var(--celo-fg)',
+					muted: 'var(--celo-muted)',
+					border: 'var(--celo-border)',
+					blue: 'var(--celo-yellow)',
+					accent: 'var(--celo-accent)',
+					card: 'var(--celo-card)'
+				},
+				// Arbitrum primary palette (navy, primary blue, teal)
 				celoLegacy: {
-					yellow: '#F7FF58',
-					yellowAlt: '#FFF96B',
-					lime: '#D9FF3F',
-					black: '#0A0A0A',
+					yellow: '#016BE5',
+					yellowAlt: '#10E1FF',
+					lime: '#10E1FF',
+					black: '#05163D',
 					white: '#FFFFFF',
 					gray: {
-						'100': '#F6F6F6',
-						'200': '#ECECEC',
-						'300': '#D9D9D9',
-						'500': '#9A9A9A',
-						'700': '#4A4A4A',
-						'900': '#171717'
+						'100': '#f1f5f9',
+						'200': '#e2e8f0',
+						'300': '#cbd5e1',
+						'500': '#64748b',
+						'700': '#475569',
+						'900': '#05163D'
 					}
+				},
+				arbitrumPalette: {
+					navy: '#05163D',
+					blue: '#016BE5',
+					teal: '#10E1FF',
 				},
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -95,12 +112,13 @@ const config: Config = {
 			sm: 'calc(var(--radius) - 4px)'
 		},
   		boxShadow: {
-			soft: '0 10px 30px -12px rgba(0,0,0,0.15)',
-			focus: '0 0 0 2px var(--celo-yellow)'
+  			soft: '0 10px 30px -12px rgba(0,0,0,0.15)',
+  			focus: '0 0 0 2px var(--celo-yellow)'
   		},
   		fontFamily: {
   			display: 'var(--font-display)',
-  			body: 'var(--font-body)'
+  			body: 'var(--font-body)',
+  			arbitrum: ['var(--font-arbitrum)', 'Plus Jakarta Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
   		},
   		keyframes: {
   			'accordion-down': {

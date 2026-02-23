@@ -40,7 +40,7 @@ const PROTECTED_ROUTES = {
  */
 const PUBLIC_ROUTES = {
   api: /^\/api\/(health|courses$|contact|subscribe)/,
-  pages: /^\/($|academy|marketplace|NFTs|ramps)/,
+  pages: /^\/($|academy|NFTs|ramps)/,
 } as const;
 
 /**

@@ -1,7 +1,7 @@
-import { createConfig, http, useWriteContract, useReadContract, useAccount } from 'wagmi'
+import { useWriteContract, useReadContract, useAccount } from 'wagmi'
 import { celo, celoAlfajores } from 'wagmi/chains'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
-import { Address, parseEther } from 'viem'
+import { type Address } from 'viem'
 
 // Contract ABI for MilestoneBadge
 export const MILESTONE_BADGE_ABI = [

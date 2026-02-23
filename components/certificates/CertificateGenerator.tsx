@@ -24,7 +24,7 @@ export function CertificateGenerator({
   completionPercentage,
 }: CertificateGeneratorProps) {
   const { address, isConnected } = useAccount();
-  const { disconnect } = useDisconnect();
+  const { disconnect: _disconnect } = useDisconnect();
   
   const {
     generateCertificate,
@@ -34,7 +34,7 @@ export function CertificateGenerator({
     isConfirmingCertificate,
     certificateSuccess,
     certificateData,
-    resetCertificateData,
+    resetCertificateData: _resetCertificateData,
   } = useCertificateGeneration();
   
   const { hasCertificate } = useHasCertificate(address, course.slug, course.id);

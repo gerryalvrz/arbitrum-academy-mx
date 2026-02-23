@@ -1,6 +1,5 @@
 import { PrismaClient } from '@prisma/client'
 import fs from 'fs'
-import path from 'path'
 
 // Setup SSL certificate for Prisma if needed
 let sslConfig: any = {}

@@ -14,7 +14,6 @@ import { CertificateGenerator } from '@/components/certificates/CertificateGener
 import { SponsoredModuleCompletion } from './SponsoredModuleCompletion';
 import { ModuleCompletionProvider } from '@/lib/contexts/ModuleCompletionContext';
 import { getOptimizedContractAddress, getNetworkConfig } from '@/lib/contracts/optimized-badge-config';
-import { useChainId } from 'wagmi';
 import type { Address } from 'viem';
 
 interface Module {

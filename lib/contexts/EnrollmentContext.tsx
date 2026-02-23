@@ -2,14 +2,12 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { useAuth } from '@/hooks/useAuth';
-import { useCourseEnrollmentBadge } from '@/lib/hooks/useSimpleBadge';
 import { getOptimizedContractConfig } from '@/lib/contracts/optimized-badge-config';
 import { getCourseTokenId } from '@/lib/courseToken';
 import { useSmartAccount } from '@/lib/contexts/ZeroDevSmartWalletProvider';
 import { encodeFunctionData } from 'viem';
 import { usePrivy } from '@privy-io/react-auth';
 import { useQueryClient } from '@tanstack/react-query';
-import { useChainId } from 'wagmi';
 import { useDirectMainnetEnrollment } from '@/lib/hooks/useDirectMainnetReads';
 import type { Address } from 'viem';
 
@@ -47,7 +45,7 @@ export function EnrollmentProvider({
   console.log('[ENROLLMENT CONTEXT] Initializing for course:', courseSlug);
   
   const { isAuthenticated, wallet } = useAuth();
-  const { authenticated: privyAuthenticated } = usePrivy();
+  const { authenticated: _privyAuthenticated } = usePrivy();
   const queryClient = useQueryClient();
   // Force mainnet regardless of connected wallet chain
   const contractConfig = getOptimizedContractConfig(42220);
@@ -114,7 +112,7 @@ export function EnrollmentProvider({
       const isOnChain = !!directMainnetCheck.isEnrolled;
       if (isOnChain && !didSync) {
         try {
-          const res = await fetch(`/api/courses/${courseSlug}/sync-enrollment`, {
+          const _res = await fetch(`/api/courses/${courseSlug}/sync-enrollment`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ address: addressForEnrollmentCheck }),

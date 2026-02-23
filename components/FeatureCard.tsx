@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image';
 
 export default function FeatureCard({ title, description, icon }: { title: string; description: string; icon?: string }) {
   return (
@@ -10,8 +9,8 @@ export default function FeatureCard({ title, description, icon }: { title: strin
         border: '0.5px solid #374151'
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.background = 'linear-gradient(to bottom, #ffff66, #fffacd)';
-        e.currentTarget.style.borderColor = '#000';
+        e.currentTarget.style.background = 'linear-gradient(to bottom, rgba(1,107,229,0.12), rgba(16,225,255,0.06))';
+        e.currentTarget.style.borderColor = 'rgba(1,107,229,0.4)';
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.background = 'transparent';

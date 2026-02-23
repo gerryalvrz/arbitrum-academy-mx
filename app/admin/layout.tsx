@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BookOpen, Users, Settings, Home, Plus, List, LogOut, FileText, Package } from "lucide-react";
+import { BookOpen, Users, Settings, Home, Plus, List, LogOut, FileText } from "lucide-react";
 import { useRequireAdmin } from "@/hooks/useAuth";
 
 const navigation = [
@@ -13,9 +13,6 @@ const navigation = [
   { name: 'Instructors', href: '/admin/instructors', icon: Users },
   { name: 'Smart Accounts', href: '/admin/smart-accounts', icon: List },
   { name: 'Registro de Proyectos', href: '/admin/registrodeproyectos', icon: FileText },
-  { name: 'Añadir Merch', href: '/admin/merch', icon: Plus },
-  { name: 'Inventario', href: '/admin/merch/inventory', icon: List },
-  { name: 'Envíos', href: '/admin/envios', icon: Package },
   { name: 'Settings', href: '/admin/settings', icon: Settings },
 ];
 

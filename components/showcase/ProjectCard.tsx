@@ -1,7 +1,5 @@
 'use client';
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
-
 type Project = {
   slug: string;
   title: string;
@@ -51,7 +49,6 @@ export function ProjectCard({ project }: { project: Project }) {
     <article className="bg-celo-bg border border-celo-border rounded-2xl overflow-hidden shadow-lg flex flex-col">
       <div className="relative aspect-[1200/630] bg-neutral-100 dark:bg-neutral-900">
         {img ? (
-          // eslint-disable-next-line @next/next/no-img-element
           <img src={img} alt={project.title} className="object-cover w-full h-full" loading="lazy" />
         ) : (
           <div className="w-full h-full flex items-center justify-center text-sm text-celo-muted">

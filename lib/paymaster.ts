@@ -190,7 +190,7 @@ export async function getPaymasterData(
 export async function estimateSponsoredGas(
   to: Address,
   data: `0x${string}`,
-  userAddress: Address
+  _userAddress: Address
 ): Promise<{
   gasLimit: bigint;
   gasPrice: bigint;

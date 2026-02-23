@@ -1,7 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { useWriteContract, useChainId } from 'wagmi';
+import { useWriteContract } from 'wagmi';
 import { useSmartAccount } from '@/lib/contexts/ZeroDevSmartWalletProvider';
 import { useQueryClient } from '@tanstack/react-query';
 import { encodeFunctionData } from 'viem';

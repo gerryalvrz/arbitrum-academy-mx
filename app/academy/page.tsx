@@ -43,9 +43,9 @@ export default async function AcademyIndex() {
     <div className="min-h-screen bg-celo-bg text-celo-fg">
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-celo-border/60">
-        {/* Gradient overlay: black in yellow theme, yellow tint in dark theme */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(0,0,0,.08),transparent_45%)] dark:bg-[radial-gradient(ellipse_at_top_left,rgba(252,255,82,.12),transparent_45%)]"></div>
-        {/* Dots overlay: black dots in yellow theme, white dots in dark theme */}
+        {/* Gradient overlay: subtle in light theme, blue tint in dark (Arbitrum) */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(0,0,0,.08),transparent_45%)] dark:bg-[radial-gradient(ellipse_at_top_left,rgba(1,107,229,.12),transparent_45%)]"></div>
+        {/* Dots overlay */}
         <div className="absolute inset-0 [background-image:radial-gradient(circle,rgba(0,0,0,0.08)_1px,transparent_1px)] dark:[background-image:radial-gradient(circle,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:12px_12px] opacity-100"></div>
         <div className="relative max-w-7xl mx-auto px-4 md:px-6 py-16 md:py-24">
           <div>

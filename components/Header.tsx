@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import ThemeToggle from '@/components/theme/ThemeToggle';
 import PrivyLogin from './PrivyLogin';
-import CeloLogo from './CeloLogo';
+import ArbitrumLogo from './ArbitrumLogo';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,11 +19,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 backdrop-blur-xl bg-celo-bg lg:bg-celo-bg/95 border-b border-celo-border shadow-md mb-4">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-5 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition-opacity">
-          <CeloLogo width={80} height={18} className="text-celo-yellow sm:w-[100px] sm:h-[22px]" />
-          <span className="font-italic text-sm sm:text-lg text-celo-yellow">
-            México
-          </span>
+        <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+          <ArbitrumLogo width={168} height={52} className="object-contain min-h-[44px] sm:min-h-[52px]" />
         </Link>
         
         {/* Desktop Navigation and Actions - All to the right */}
@@ -34,13 +31,6 @@ export default function Header() {
               className="text-celo-fg font-medium relative group transition-all duration-200"
             >
               Academia
-              <span className="absolute -bottom-2 left-0 w-full h-[0.5px] bg-celo-muted transition-all duration-400 ease-out group-hover:bottom-0 opacity-0 group-hover:opacity-100"></span>
-            </Link>
-               <Link 
-              href="/marketplace" 
-              className="text-celo-fg font-medium relative group transition-all duration-200"
-            >
-              Marketplace
               <span className="absolute -bottom-2 left-0 w-full h-[0.5px] bg-celo-muted transition-all duration-400 ease-out group-hover:bottom-0 opacity-0 group-hover:opacity-100"></span>
             </Link>
             <Link 
@@ -98,13 +88,6 @@ export default function Header() {
               className="text-celo-fg font-medium py-2 transition-colors duration-200 hover:opacity-70"
             >
               Academia
-            </Link>
-            <Link 
-              href="/marketplace" 
-              onClick={closeMenu}
-              className="text-celo-fg font-medium py-2 transition-colors duration-200 hover:opacity-70"
-            >
-              Marketplace
             </Link>
             <Link 
               href="/proyectos" 

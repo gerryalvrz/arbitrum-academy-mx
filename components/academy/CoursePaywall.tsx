@@ -18,7 +18,7 @@ export function CoursePaywall({
   courseTitle,
   courseSlug,
   reason,
-  isWalletConnected = false,
+  isWalletConnected: _isWalletConnected = false,
   onEnroll,
   isEnrolling = false,
 }: CoursePaywallProps) {

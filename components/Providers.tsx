@@ -1,5 +1,4 @@
 'use client';
-import { ThemeProvider } from 'next-themes';
 import { ToastProvider } from '@/components/ui/toast';
 import { PrivyProvider } from '@privy-io/react-auth';
 import { celo } from 'viem/chains';
@@ -30,7 +29,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
         loginMethods: ['wallet', 'email'],
         appearance: {
           theme: 'light',
-          accentColor: '#FCFF52',
+          accentColor: '#016BE5',
           walletList: ['metamask', 'detected_wallets'],
           showWalletLoginFirst: false,
         },

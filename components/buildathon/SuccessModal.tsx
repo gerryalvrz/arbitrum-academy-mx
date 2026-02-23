@@ -13,11 +13,11 @@ interface SuccessModalProps {
 }
 
 export default function SuccessModal({
-  open,
+  open: isOpen,
   onOpenChange,
 }: SuccessModalProps) {
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
+    <Dialog open={isOpen} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-md bg-[#FCF6F1] dark:bg-celo-bg border-celo-border">
         <DialogHeader>
           <DialogTitle className="text-2xl font-display text-celo-fg text-center">

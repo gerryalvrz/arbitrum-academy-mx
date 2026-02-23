@@ -11,7 +11,6 @@ import {
 import { getEntryPoint, KERNEL_V3_1 } from '@zerodev/sdk/constants';
 import { signerToEcdsaValidator } from "@zerodev/ecdsa-validator";
 import { celo } from "viem/chains";
-import { useChainId } from 'wagmi';
 
 // FORCE MAINNET: Always use Celo mainnet for all smart wallet operations
 const FORCED_CHAIN = celo;
@@ -491,7 +490,6 @@ export const ZeroDevSmartWalletProvider = ({
       setSmartAccountAddress(null);
       setError(null);
       setHasInitialized(false);
-      localStorage.removeItem('merch-purchases');
       console.log('[ZERODEV] Cleared legacy data on logout');
     }
   }, [privyReady, authenticated]);

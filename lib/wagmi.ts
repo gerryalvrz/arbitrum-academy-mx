@@ -24,7 +24,6 @@ const connectors = [
 ];
 
 if (!isValidWcId && wcProjectId) {
-  // eslint-disable-next-line no-console
   console.warn('[wagmi] Ignoring invalid WalletConnect projectId (set NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID correctly).');
 }
 

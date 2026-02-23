@@ -2,10 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { usePrivy } from '@privy-io/react-auth';
-import { celo } from 'viem/chains';
-
 const CELO_MAINNET_CHAIN_ID = '0xa4ec'; // 42220 in hex
-const CELO_MAINNET_CHAIN_ID_DECIMAL = 42220;
 
 export function NetworkChecker() {
   const { authenticated, ready } = usePrivy();

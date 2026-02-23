@@ -1,39 +1,37 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Inter, Crimson_Pro } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-body' });
-const crimsonPro = Crimson_Pro({
-  subsets: ['latin'],
-  style: ['normal', 'italic'],
-  weight: ['200', '300'],
-  variable: '--font-title',
-  display: 'swap'
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ['latin', 'latin-ext'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-arbitrum',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: 'CELO México',
-  description: 'Celo México: el hub para builders y comunidad.',
+  title: 'Arbitrum Academy México',
+  description: 'Arbitrum Academy México: el hub para builders y comunidad.',
   icons: {
-    icon: '/icons/celomx logo.png',
-    shortcut: '/icons/celomx logo.png',
-    apple: '/icons/celomx logo.png',
+    icon: '/1225_Arbitrum_Logomark_all/1225_Arbitrum_Logomark_FullColor_ClearSpace.png',
+    shortcut: '/1225_Arbitrum_Logomark_all/1225_Arbitrum_Logomark_FullColor_ClearSpace.png',
+    apple: '/1225_Arbitrum_Logomark_all/1225_Arbitrum_Logomark_FullColor_ClearSpace.png',
   },
   openGraph: {
-    title: 'CELO Mexico',
-    description: 'Celo Mexico: el hub para builders y comunidad.',
+    title: 'Arbitrum Academy Mexico',
+    description: 'Arbitrum Academy Mexico: el hub para builders y comunidad.',
     type: 'website',
-    url: 'https://celo-mexico.local',
+    url: 'https://arbitrum-academy-mx.local',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CELO Mexico',
-    description: 'Celo Mexico: el hub para builders y comunidad.',
+    title: 'Arbitrum Academy Mexico',
+    description: 'Arbitrum Academy Mexico: el hub para builders y comunidad.',
   },
 };
 
@@ -43,7 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         
       </head>
-      <body className={`${inter.variable} ${crimsonPro.variable} min-h-screen antialiased bg-celo-bg text-celo-fg font-sans`}>
+      <body className={`${plusJakarta.variable} min-h-screen antialiased bg-celo-bg text-celo-fg font-sans`}>
         <ThemeProvider>
           <Providers>
             <div className="min-h-screen flex flex-col">

@@ -2,14 +2,11 @@
 
 import { useState, useCallback } from 'react';
 import { usePrivy } from '@privy-io/react-auth';
-import { encodeFunctionData, type Address } from 'viem';
+import { encodeFunctionData } from 'viem';
 import { useQueryClient } from '@tanstack/react-query';
 import { useSmartAccount } from '@/lib/contexts/ZeroDevSmartWalletProvider';
 import { getCourseTokenId } from '@/lib/courseToken';
-import {
-  OPTIMIZED_CONTRACT_CONFIG,
-  ENROLLMENT_CACHE_CONFIG,
-} from '@/lib/contracts/optimized-badge-config';
+import { OPTIMIZED_CONTRACT_CONFIG } from '@/lib/contracts/optimized-badge-config';
 
 // Use unified contract configuration (SINGLE SOURCE OF TRUTH)
 const { address: CONTRACT_ADDRESS, abi: CONTRACT_ABI } = OPTIMIZED_CONTRACT_CONFIG;

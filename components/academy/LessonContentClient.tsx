@@ -4,7 +4,6 @@ import React from 'react';
 import { ReadingProgress } from '@/components/course/ReadingProgress';
 import { useAuth } from '@/hooks/useAuth';
 import ModuleProgress from '@/components/academy/ModuleProgress';
-import { useEnrollment } from '@/lib/contexts/EnrollmentContext';
 
 type LessonContentClientProps = {
   courseSlug?: string;

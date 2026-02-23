@@ -18,7 +18,7 @@ interface ContractTransactionResult {
  * and provides methods for sponsored enrollment and module completion.
  */
 export function useEnrollmentService() {
-  const { user, authenticated } = usePrivy();
+  const { user: _user, authenticated } = usePrivy();
   const { 
     kernelClient, 
     smartAccountAddress, 

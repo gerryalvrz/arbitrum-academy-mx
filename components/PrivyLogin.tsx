@@ -21,7 +21,7 @@ function RegisterSmartAccountButton({ onDone }: { onDone?: () => void }) {
   const { smartAccountAddress, isSmartAccountReady } = useSmartAccount();
   const auth = useAuth();
   const [status, setStatus] = useState<'idle'|'saving'|'saved'|'error'>('idle');
-  const [error, setError] = useState<string | null>(null);
+  const [_error, setError] = useState<string | null>(null);
 
   const register = async () => {
     if (!smartAccountAddress) return;
@@ -45,8 +45,8 @@ function RegisterSmartAccountButton({ onDone }: { onDone?: () => void }) {
         setStatus('idle');
         onDone?.();
       }, 800);
-    } catch (e: any) {
-      setError(e.message || 'Error');
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : 'Error');
       setStatus('error');
     }
   };
@@ -80,10 +80,10 @@ export default function PrivyLogin() {
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const { smartAccountAddress, isSmartAccountReady } = useSmartAccount();
-  const { balances, isLoading: balancesLoading } = useTokenBalances(smartAccountAddress ?? undefined);
-  
-  // Emergency reset function for stuck sessions
-  const forceReset = () => {
+  const _tokenBalances = useTokenBalances(smartAccountAddress ?? undefined);
+
+  // Emergency reset function for stuck sessions (kept for potential debug use)
+  const _forceReset = () => {
     localStorage.removeItem('privy:token');
     localStorage.removeItem('privy:refresh_token');
     localStorage.removeItem('privy:identity_token');

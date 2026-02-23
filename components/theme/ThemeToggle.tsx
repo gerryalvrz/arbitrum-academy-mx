@@ -10,11 +10,11 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-pressed={isYellow}
-      aria-label="Cambiar tema amarillo/negro"
+      aria-label="Cambiar tema claro/oscuro"
       className="inline-flex items-center gap-1.5 rounded-full border-celo-border border-[0.5px] bg-transparent px-3 py-1 text-xs sm:text-sm hover:bg-celoLegacy-yellow/10 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-celo-yellow focus-visible:ring-offset-0"
     >
-      {isYellow ? <Sun className="h-4 w-4 text-black" /> : <Moon className="h-4 w-4 text-celo-yellow" />}
-      <span className="hidden sm:inline">{isYellow ? "Yellow" : "Dark"}</span>
+      {isYellow ? <Sun className="h-5 w-5 text-black" /> : <Moon className="h-5 w-5 text-celo-yellow" />}
+      <span className="hidden sm:inline">{isYellow ? "White" : "Dark"}</span>
     </button>
   );
 }

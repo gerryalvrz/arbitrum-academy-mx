@@ -12,7 +12,7 @@ export interface ToastProps {
 }
 
 export interface ToastContextType {
-  toast: (props: ToastProps) => void;
+  toast: (opts: ToastProps) => void;
 }
 
 const ToastContext = React.createContext<ToastContextType | undefined>(undefined);
@@ -20,9 +20,9 @@ const ToastContext = React.createContext<ToastContextType | undefined>(undefined
 export function ToastProvider({ children }: { children: React.ReactNode }) {
   const [toasts, setToasts] = React.useState<ToastProps[]>([]);
 
-  const toast = React.useCallback((props: ToastProps) => {
+  const toast = React.useCallback((opts: ToastProps) => {
     const id = Math.random().toString(36).substr(2, 9);
-    setToasts(prev => [...prev, { ...props, id }]);
+    setToasts(prev => [...prev, { ...opts, id }]);
     
     // Auto remove after 5 seconds
     setTimeout(() => {

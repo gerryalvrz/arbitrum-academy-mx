@@ -29,9 +29,9 @@ interface SponsoredModuleCompletionProps {
 }
 
 export function SponsoredModuleCompletion({
-  courseSlug,
-  courseId,
-  moduleIndex,
+  courseSlug: _courseSlug,
+  courseId: _courseId,
+  moduleIndex: _moduleIndex,
   moduleTitle,
   isCompleted = false,
   isEnrolled = false,
@@ -55,7 +55,7 @@ export function SponsoredModuleCompletion({
     resetCompletion,
   } = useUnifiedModuleCompletion();
 
-  const [showTransactionDetails, setShowTransactionDetails] = useState(false);
+  const [_showTransactionDetails, setShowTransactionDetails] = useState(false);
 
   // Don't show if not enrolled or not authenticated
   if (!ready || !authenticated || !isEnrolled) {

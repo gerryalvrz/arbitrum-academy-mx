@@ -1,13 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { useWriteContract, useWaitForTransactionReceipt, useChainId } from 'wagmi';
+import { useWriteContract, useWaitForTransactionReceipt } from 'wagmi';
 import { type Address } from 'viem';
 import { getCourseTokenId } from '@/lib/courseToken';
 import { getOptimizedContractAddress } from '@/lib/contracts/optimized-badge-config';
 
 // Certificate contract ABI (would be a separate ERC721 contract for certificates)
-const CERTIFICATE_ABI = [
+const _CERTIFICATE_ABI = [
   {
     type: 'function',
     name: 'mintCertificate',
@@ -72,7 +72,7 @@ export function useCertificateGeneration() {
     });
 
     // Encode completion data
-    const completionData = new TextEncoder().encode(JSON.stringify({
+    const _completionData = new TextEncoder().encode(JSON.stringify({
       courseSlug,
       courseTitle,
       completedModules,
@@ -126,7 +126,7 @@ export function useCertificateGeneration() {
 /**
  * Hook to check if user has certificate for a course
  */
-export function useHasCertificate(userAddress?: Address, courseSlug?: string, courseId?: string) {
+export function useHasCertificate(_userAddress?: Address, _courseSlug?: string, _courseId?: string) {
   // This would check if the user has a certificate NFT
   // For now, we'll assume no certificates exist yet
   return {

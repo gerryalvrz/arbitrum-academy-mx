@@ -1,4 +1,3 @@
-type ModuleKey = { courseSlug: string; moduleIndex: number };
 const KEY = "academy:progress:v1";
 
 export type ProgressState = {

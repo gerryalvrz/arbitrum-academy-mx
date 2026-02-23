@@ -51,4 +51,5 @@ export const tokens: Token[] = [
   },
 ];
 
-export default { tokens };
+const tokenConfig = { tokens };
+export default tokenConfig;

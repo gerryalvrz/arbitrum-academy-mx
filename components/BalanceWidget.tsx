@@ -1,7 +1,6 @@
 'use client';
 import { useState } from 'react';
 import { Wallet, Coins } from 'lucide-react';
-import PrivyLogin from './PrivyLogin';
 
 interface BalanceWidgetProps {
   className?: string;
@@ -9,7 +8,7 @@ interface BalanceWidgetProps {
 
 export default function BalanceWidget({ className = '' }: BalanceWidgetProps) {
   const [celoBalance, setCeloBalance] = useState<string>('0');
-  const [loading, setLoading] = useState(false);
+  const [loading, _setLoading] = useState(false);
   const [address, setAddress] = useState<string>('');
   const [authenticated, setAuthenticated] = useState(false);
 

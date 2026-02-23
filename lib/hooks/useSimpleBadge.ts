@@ -5,10 +5,9 @@ import { type Address, encodeFunctionData } from 'viem';
 import { useState, useEffect } from 'react';
 import { usePrivy, useWallets } from '@privy-io/react-auth';
 import { useQueryClient } from '@tanstack/react-query';
-import { LEGACY_COURSE_TOKEN_IDS, generateTokenIdFromCourseId, getCourseTokenId } from '@/lib/courseToken';
+import { getCourseTokenId } from '@/lib/courseToken';
 import {
   getOptimizedContractConfig,
-  getOptimizedContractAddress,
   ENROLLMENT_CACHE_CONFIG,
   MODULE_CACHE_CONFIG,
   getNetworkConfig,
@@ -221,9 +220,9 @@ export function useClaimBadge() {
 
 // Hook to admin mint badges (NOT SUPPORTED in optimized contract)
 export function useAdminMintBadge() {
-  const { writeContract, data: hash, error, isPending } = useWriteContract();
+  const { writeContract: _writeContract, data: hash, error, isPending } = useWriteContract();
 
-  const adminMint = (to: Address, courseId: bigint, amount: bigint = 1n) => {
+  const adminMint = (to: Address, courseId: bigint, _amount: bigint = 1n) => {
     // adminMint function does not exist in optimized contract
     console.error('[ADMIN MINT] adminMint function is not available in optimized contract');
     throw new Error('adminMint function is not supported in optimized contract. Use enroll() instead.');

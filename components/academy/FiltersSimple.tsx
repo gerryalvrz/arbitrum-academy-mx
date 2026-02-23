@@ -9,7 +9,7 @@ import { FilterState } from "./types";
 
 interface FiltersProps {
   filters: FilterState;
-  onChange: (filters: FilterState) => void;
+  onChange: (next: FilterState) => void;
   categories: string[];
   showMobileFilters?: boolean;
   onToggleMobileFilters?: () => void;

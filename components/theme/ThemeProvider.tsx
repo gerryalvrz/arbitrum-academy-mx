@@ -2,7 +2,7 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 
 type Theme = "yellow" | "dark";
-type Ctx = { theme: Theme; setTheme: (t: Theme) => void; toggle: () => void };
+type Ctx = { theme: Theme; setTheme: (_t: Theme) => void; toggle: () => void };
 const ThemeCtx = createContext<Ctx | null>(null);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
@@ -43,7 +43,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const value = useMemo<Ctx>(() => ({
     theme,
     setTheme,
-    toggle: () => setTheme((t) => (t === "dark" ? "yellow" : "dark")),
+    toggle: () => setTheme((prev) => (prev === "dark" ? "yellow" : "dark")),
   }), [theme]);
 
   return <ThemeCtx.Provider value={value}>{children}</ThemeCtx.Provider>;

@@ -1,7 +1,7 @@
 "use client";
 import { Progress } from "@/components/ui/progress"; // shadcn
 
-export default function CourseProgress({ courseSlug, totalModules }:{ courseSlug:string; totalModules:number }) {
+export default function CourseProgress({ courseSlug: _courseSlug, totalModules: _totalModules }:{ courseSlug:string; totalModules:number }) {
   // Simplified version without NFT connections
   const percent = 0; // Default to 0% progress
   return (

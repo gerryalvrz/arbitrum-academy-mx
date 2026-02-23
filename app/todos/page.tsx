@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 // import NewTodo from '../../components/NewTodo'
 
 export default function TodosPage() {
-  const [todos, setTodos] = useState<any[]>([])
+  const [_todos, _setTodos] = useState<any[]>([])
 
   const fetchTodos = async () => {
     // Temporarily disabled to prevent build failure

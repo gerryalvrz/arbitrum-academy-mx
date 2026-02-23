@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Loader2, ExternalLink, Wallet, Lock as LockIcon } from "lucide-react";
-import { useModuleCompletion, useHasCompletedModule } from "@/lib/hooks/useModuleCompletion";
+import { useHasCompletedModule } from "@/lib/hooks/useModuleCompletion";
 import { useAuth } from "@/hooks/useAuth";
 import { useHasBadge } from "@/lib/hooks/useSimpleBadge";
 import { getCourseTokenId } from "@/lib/courseToken";
