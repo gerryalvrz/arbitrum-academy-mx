@@ -31,7 +31,7 @@ export function SponsoredEnrollmentButton({
   courseTitle,
   className = '',
 }: SponsoredEnrollmentButtonProps) {
-  const { login, _logout, authenticated, ready } = usePrivy();
+  const { login, authenticated, ready } = usePrivy();
   const {
     isSmartAccountReady,
     smartAccountAddress,
